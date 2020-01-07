@@ -22,7 +22,6 @@
 
 body {
     
-    
     padding-bottom: 0em;
     margin: 0.5em;   
     min-height: 93vh;
@@ -41,11 +40,10 @@ header, footer {
 
 header, section, aside, footer {
     
-    padding: 2.5em;
-    padding-right: 15em;
+    padding-top: 1.5em;  
 }
 
-#red {background-color: transparent;}
+#red {background-color: transparent;} 
 #blue {background-color: transparent;}
 aside {background-color: transparent;}
 #green {background-color: transparent;}
@@ -56,12 +54,14 @@ GRID STARTER HER
 ----------------------------------------
 */
 
-header {grid-area: header}
-#red {grid-area: s1}
-#blue {grid-area: s2}
-aside {grid-area: aside}
-#green {grid-area: s3}
-footer {grid-area: footer} 
+header {grid-area: header;}
+#red {grid-area: s1;
+padding-top: 7em;}  
+#blue {grid-area: s2;}
+aside {grid-area: aside;}
+#green {grid-area: s3;
+padding-bottom: 3em;}  
+footer {grid-area: footer;} 
 
 /* 
 ----------------------------------------
@@ -71,7 +71,7 @@ MOBILE VERSION
 
 body {
     display: grid;
-    grid-template-columns: 1em 1fr 1em;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "header header header"
     ". s1 ."
@@ -92,7 +92,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   color: black;
   text-align: center;
 }
@@ -114,11 +114,15 @@ img:hover {
 TABLET VERSION
 ----------------------------------------
 */
-@media only screen and (min-width: 450px) {
+@media screen and (min-width: 700px) {
     body {
         grid-template-columns: 1fr 500px 1fr;
         background-color: aqua;
     }
+
+
+#red {
+ padding-top: 2.5em;
 }
 
  .footer {
@@ -132,13 +136,16 @@ TABLET VERSION
   color: black;
   text-align: center;
 }
+}  
+
 /* 
 ----------------------------------------
 DESKTOP VERSION
 ----------------------------------------
 */
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) { 
     body {
+        padding-top: 5em; /*fik dine elementer ned*/
         background-color: yellow;
         grid-auto-rows: 0.5fr 300px 300px 0.5fr ;
         grid-template-columns: 1fr 500px 500px 1fr;
@@ -153,8 +160,7 @@ DESKTOP VERSION
         
     }
     
-   
-}
+
     
     img {
   border: 3px solid #777;
@@ -170,6 +176,13 @@ img:hover {
 }
  
     
+    #blue {grid-area: s2;
+    padding-top:1em;}
+    #red {grid-area: s1;
+    padding-top:1em;}
+    #green{grid-area: s3;
+    padding-top:0.1em;}
+    aside{padding-top: 0.1em;}
     
     
 }
