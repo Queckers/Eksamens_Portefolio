@@ -1,0 +1,148 @@
+/* KLARGØRING TIL GRID */
+* {box-sizing: border-box;}
+
+
+
+
+    
+    #originalheader {
+                  border-style: solid;
+                  border-top-color: red;
+                  border-width: 2px 2px 2px 2px;
+                  background-color: indianred;
+                  top: 0em;
+                  padding-top: 0em;
+                  padding-right;
+                  height: 120px;
+                  text-align:center;
+                  font-size: 2.1em;
+                  position: fixed;
+                  left: 0.4em;
+                  right: 0.4em;
+                  font-family: 'Lato', sans-serif;
+                }
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image:url("background9.jpg");
+    font-family: 'Lato', sans-serif;
+    background-size: 300em;
+     
+}
+
+header, footer {
+    background-color:transparent;
+}
+
+header, section, aside, footer {
+    padding: 2.2em;
+    padding-right: 15em;
+}
+
+#red {background-color: transparent;}
+#blue {background-color: transparent;}
+aside {background-color: transparent;}
+#green {background-color: transparent;}
+
+/* 
+----------------------------------------
+GRID STARTER HER
+----------------------------------------
+*/
+
+header {grid-area: header}
+#red {grid-area: s1}
+#blue {grid-area: s2}
+aside {grid-area: aside}
+#green {grid-area: s3}
+footer {grid-area: footer} 
+
+/* 
+----------------------------------------
+MOBILE VERSION
+----------------------------------------
+*/
+@media only screen and (min-width: 250px) {
+body {
+    display: grid;
+    grid-template-columns:  1em 1fr 1em;
+    grid-template-areas:
+    "header header header"
+    ". s1 ."
+    ". s2 ."
+    ". aside ."
+    ". s3 ."
+    "footer footer footer"
+}
+
+
+    #hojre {
+        
+        text-align: right;
+        
+        
+    }
+
+    img {
+  border: 3px solid #777;
+  border-radius: 25px;
+  padding: 5px;
+  width: 380px;
+  
+
+}          
+    
+img:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 240, 141, 0.5);
+}
+    
+    
+}
+/* 
+----------------------------------------
+TABLET VERSION
+----------------------------------------
+*/
+@media only screen and (min-width: 450px) {
+    body {
+        grid-template-columns: 1fr 400px 1fr;
+    }
+    
+    
+    
+    
+
+
+/* 
+----------------------------------------
+DESKTOP VERSION
+----------------------------------------
+*/
+@media only screen and (min-width: 1000px) {
+    body {
+        background-color: transparent;
+        grid-auto-rows: 0.5fr 300px 300px 0.5fr ;
+        grid-template-columns: 1fr 500px 500px 1fr;
+        grid-template-areas:
+        "header header header header"
+        ". s1 s2 s3 "
+        ". . . ."
+            
+        
+    }
+    
+    img {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px;
+  width: 420px;
+
+}          
+    
+img:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 240, 141, 0.5);
+}
+    
+}

@@ -1,0 +1,179 @@
+/* KLARGØRING TIL GRID */
+* {box-sizing: border-box;}
+
+
+#originalheader {
+                  border-style: solid;
+                  border-top-color: red;
+                  border-width: 2px 2px 2px 2px;
+                  background-color: indianred;
+                  top: 0em;
+                  padding-top: 0em;
+                  padding-right;
+                  height: 140px;
+                  text-align:center;
+                  font-size:1.6em;
+                  position: fixed;
+                  left: 0.4em;
+                  right: 0.4em;
+                }
+
+
+
+body {
+    
+    
+    padding-bottom: 0em;
+    margin: 0.5em;   
+    min-height: 93vh;
+    background-image: url(background9.jpg);
+    background-position: top;
+    background-size: 300em;
+    background-color: transparent;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+header, footer {
+    margin-top:0em;
+    background-color:transparent;
+}
+
+header, section, aside, footer {
+    
+    padding: 2.5em;
+    padding-right: 15em;
+}
+
+#red {background-color: transparent;}
+#blue {background-color: transparent;}
+aside {background-color: transparent;}
+#green {background-color: transparent;}
+
+/* 
+----------------------------------------
+GRID STARTER HER
+----------------------------------------
+*/
+
+header {grid-area: header}
+#red {grid-area: s1}
+#blue {grid-area: s2}
+aside {grid-area: aside}
+#green {grid-area: s3}
+footer {grid-area: footer} 
+
+/* 
+----------------------------------------
+MOBILE VERSION
+----------------------------------------
+*/
+
+body {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas:
+    "header header header"
+    ". s1 ."
+    ". s2 ."
+    ". aside ."
+    ". s3 ."
+    "footer footer footer"
+}
+
+  img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 360px;
+}
+ .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+img {
+  border: 3px solid #777;
+  border-radius: 25px;
+  padding: 5px;
+  width: 380px;
+  
+
+}          
+    
+img:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 240, 141, 0.5);
+}
+/* 
+----------------------------------------
+TABLET VERSION
+----------------------------------------
+*/
+@media only screen and (min-width: 450px) {
+    body {
+        grid-template-columns: 1fr 500px 1fr;
+        background-color: aqua;
+    }
+}
+
+ .footer {
+  position: fixed;
+  margin-bottom: 1em;
+  left:  0%;
+  right: 0%;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+}
+/* 
+----------------------------------------
+DESKTOP VERSION
+----------------------------------------
+*/
+@media only screen and (min-width: 1000px) {
+    body {
+        background-color: yellow;
+        grid-auto-rows: 0.5fr 300px 300px 0.5fr ;
+        grid-template-columns: 1fr 500px 500px 1fr;
+        grid-template-areas:
+        "header header header header"
+        ". s1 s2 ."
+        ". aside s3 ."
+        
+        "footer footer footer footer"
+            
+            
+        
+    }
+    
+   
+}
+    
+    img {
+  border: 3px solid #777;
+  border-radius: 25px;
+  padding: 5px;
+  width: 420px;
+  
+
+}          
+    
+img:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 240, 141, 0.5);
+}
+ 
+    
+    
+    
+}
+
+
+
+
