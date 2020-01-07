@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Repsonsivt design og Grids</title>
+
+    <link rel="stylesheet" href="respgrids.css">
+
+</head>
+<body>
+<!--
+    header start
+-->
+<header>
+    <div id="originalheader">
+					<h1> Responsivt design & Grids</h1>
+				</div>
+  
+</header>
+
+
+<section id="red">
+    
+<p>
+At noget er responsivt er et spørgsmål om, hvorvidt det fungerer på tværs af forskellige platforme. 
+Eksempelvis om en side er kodet specifikt til en browser på computeren – eller lavet til smartphonen. </p>
+    
+<p> 
+Vi benytter os ofte af en regel med udtrykket ”Mobile First” – Altså vi koder først og fremmest siden til mobilen, derefter til evt. tablets og pc’er. 
+Dette er en vigtig regel, eftersom vi i stigende grad ser flere brugere af smartphones og tablets end traditionelle computere. </p> 
+    
+<p> 
+Vælger man at lave siden responsiv; vil evt. tekst, billeder og andet indhold følge flydende med, når man ændrer i skærmstørrelsen.
+I ”gamle dage” før smartphones tid, så man flere Statiske eller Adaptive webdesigns. Selvom de stadig findes i dag, er det de færreste opdaterede sider, som gør brug af denne teknik, eftersom det primært er designet til pc brug. </p>
+
+    
+    <li> Statisk Layout </li> 
+        <p> Den gamle metode fra før smartphone tiden.</p>
+    <li> Adaptivt Layout </li> 
+        <p> Består af en række Statiske layouts, men benytter sig af @medieaqueries - Strategien her er 'mobile last'.</p>
+    <li> Responsivt Layout </li> 
+        <p> Giver tilgængelighed på alle skærme - vi koder primært med dette layout. Her benytter vi os af @media ; hvilket er regler som medgiver hvilken skærm man bruger.</p>
+    
+    
+<p> Kilde: Niels Østergaard </p>    
+ 
+     
+    
+<h2> Grids </h2>
+    
+<p>
+En side består af kolonner og rækker. Der er flere måder, hvorpå man kan positionere disse. </p>
+<p>
+Min personlige favorit er CSS Grids – da den kan tage sig af både kolonnerne og rækkerne på samme tid, i modsætning til andre positioneringssystemer, såsom flexbox.  
+
+
+                                  
+                                  </p>
+    
+ <img src="grids.PNG" 
+                             alt='Web' class="responsive"
+                             id="gridspic"
+                             width="336">
+    
+    
+<img src="grids2.PNG" 
+                             alt='Web' class="responsive"
+                             id="gridspic"
+                             width="380">
+
+<p> Med grids giver man siden et "grid-template-areas" - som kan ses på ovenstående billede</p>
+
+<p> Her har man givet de forskellige items (kasser) en række id'er, hvorefter man fortæller hvor meget det enkelte grid skal fylde.</p>
+        
+</section>
+
+
+ 
+ 
+
+</body>
+</html>
